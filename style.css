@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+ --primary : rgb(225, 225, 225);
+ --secondary : rgb(25, 25, 25);
+ --accent: rgb(225, 25, 225);
+ --highlight: rgb(125, 25, 225);
+  --box-shadow: 0 0 2px var(--accent), 0 0 2px var(--highlight);
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0.5rem;
+}
+
+html {
+  font-size: 90%;
+}
+
+body {
+ width: 100vw;
+ overflow-x: hidden;
+  background-color: var(--primary);
+  color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container > div, .container > header, .container > form {
+  width: 100%;
+  max-width: 750px;
+}
+
+header {
+  margin-bottom: 1rem;
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  background-color: var(--secondary);
+  color: var(--highlight);
+}
+
+h1 {
+  letter-spacing: 1.2px;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.row, .col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  flex-basis: calc(100% / 2);
+}
+
+.row {
+  flex-wrap: wrap;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.balance {
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  background-color: var(--secondary);
+  color: var(--highlight);
+}
+
+.inc-exp-container {
+  text-align: center;
+  margin: 1rem 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+
+.money {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  background-color: var(--secondary);
+}
+
+label {
+  display: inline-block;
+}
+
+input[type='text'],
+input[type='number'] {
+  border: 0;
+  box-shadow: var(--box-shadow);
+  border-radius: 0.25rem;
+  display: block;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.btn {
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  background-color: var(--highlight);
+  color: var(--primary);
+  border: 0;
+  outline: none;
+  display: block;
+  font-weight: 750;
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  border-radius: 0.25rem;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  color: var(--primary);
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+label, input, button {
+  font-size: 1.5rem;
+  font-weight: 750;
+}
+
+.list {
+  list-style-type: none;
+  margin-bottom: 5rem;
+  width: 100%;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.list li {
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.list li.plus {
+  border-right: 8px solid rgb(125,225,125);
+  border-left: 8px solid rgb(125,225,125);
+}
+
+.list li.minus {
+  border-right: 8px solid rgb(225,125,125);
+  border-left: 8px solid rgb(225,125,125);
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: var(--accent);
+  border: 0;
+  color: var(--secondary);
+  font-size: 2rem;
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-weight: 700;
+  border-radius: 0.5rem;
+}
+
+.delete-btn:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+.red, #my-expense {
+  color: rgb(225,125,125);
+}
+
+.green, #my-income {
+  color: rgb(125,225,125);
+}
+
+.black-bg, #addNewForm {
+  background-color: var(--secondary);
+}
+
+#addNewForm {
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background-color: var(--primary);
+  color: var(--secondary);
+  width: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+}
+
+#addNewForm h3 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+#addNewForm form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#addNewForm form .form-control {
+  width: 100%;
+  margin: 1rem 0;
+}
+
+#addNewForm label {
+  font-weight: 700;
+  width: 100%;
+}
+
+#addNewForm input[type='text'],
+#addNewForm input[type='number'] {
+  background-color: rgb(225,225,225);
+  color: var(--secondary);
+  width: 100%;
+}
+
+#addNewForm input[type='text']:focus,
+#addNewForm input[type='number']:focus {
+  background-color: var(--secondary);
+  color: rgb(225,225,225);
+}
+
+.hide {
+  display: none;
+}
+
+hr {
+  height: 2px;
+  background-color: var(--secondary);
+  margin: 2rem 0;
+  border: 0;
+  width: 100%;
+  box-shadow: var(--box-shadow);
+}
