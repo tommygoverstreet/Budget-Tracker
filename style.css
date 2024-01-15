@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
 
 :root {
- --primary : rgb(225, 225, 225);
- --secondary : #222;
- --accent: rgb(225, 25, 225);
- --highlight: rgb(125, 25, 225);
+  --primary: rgb(225, 225, 225);
+  --secondary: #222;
+  --accent: rgb(225, 25, 225);
+  --highlight: rgb(125, 25, 225);
   --box-shadow: 0 0 2px var(--accent), 0 0 2px var(--highlight);
-
 }
 
 * {
@@ -15,23 +14,28 @@
   padding: 0;
 }
 
+html {
+  font-size: 85%;
+}
+
 body {
- width: 100vw;
- min-height: 100vh;
- overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
   background-color: var(--primary);
   color: var(--secondary);
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1rem;
   line-height: 1.2;
 }
 
 header {
- background-color: var(--secondary);
- color: var(--primary);
+  background-color: var(--secondary);
+  color: var(--primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,39 +45,48 @@ header {
 }
 
 aside {
- background-color: var(--secondary);
- color: var(--primary);
- height: 100%;
- min-height: 90vh;
- display: flex;
- flex-direction: column;
- align-items: center;
- padding: 1rem;
+  background-color: var(--secondary);
+  color: var(--primary);
+  height: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
- font-family: Arial, Helvetica, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-h1, .h1 {
- font-size: 1.5rem;
+h1,
+.h1 {
+  font-size: 1.5rem;
 }
 
-h2, .h2 {
- font-size: 1.75rem;
+h2,
+.h2 {
+  font-size: 1.75rem;
 }
 
-h3, .h3 {
- font-size: 1.15rem;
+h3,
+.h3 {
+  font-size: 1.15rem;
 }
 
-h4, .h4 {
- font-size: 1.5rem;
- text-transform: uppercase;
+h4,
+.h4 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
 }
 
-input[type='text'],
-input[type='number'] {
+input[type="text"],
+input[type="number"] {
   border: 0;
   box-shadow: var(--box-shadow);
   border-radius: 0.25rem;
@@ -83,66 +96,71 @@ input[type='number'] {
 }
 
 main {
- padding: 1rem;
+  padding: 1rem;
 }
 
 main h3 {
- font-size: 2rem;
+  font-size: 2rem;
 }
 
 table {
- border-collapse: collapse;
- width: 100%;
- padding: 0;
- margin-top: 1rem;
+  border-collapse: collapse;
+  width: 100%;
+  padding: 0;
+  margin-top: 1rem;
 }
 
 thead tr {
- background-color: var(--secondary);
- color: var(--primary);
+  background-color: var(--secondary);
+  color: var(--primary);
 }
 
 tbody tr:nth-child(even) {
- background-color: #ccc;
+  background-color: #ccc;
 }
 
-th, td {
- padding: 0.5rem;
- text-align: center;
- border: 0;
+th,
+td {
+  padding: 0.5rem;
+  text-align: center;
+  border: 0;
 }
 
-th:nth-child(1), td:nth-child(1) {
- width: 40px;
+th:nth-child(1),
+td:nth-child(1) {
+  width: 40px;
 }
 
 td:nth-child(3) {
- width: 35px;
+  width: 35px;
 }
 
 td:nth-child(4) {
- width: 10px;
- height: auto !important;
- padding: inherit;
+  width: 10px;
+  height: auto !important;
+  padding: inherit;
 }
 
-label, input, button {
- font-weight: 750;
+label,
+input,
+button {
+  font-weight: 750;
 }
 
 .container {
- width: 100%;
- height: 100%;
- min-height: 100vh;
- display: grid;
-grid-template-columns: 1fr 3fr;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
 
 .center {
- text-align: center;
+  text-align: center;
 }
 
-.row, .col {
+.row,
+.col {
   display: flex;
   width: 100%;
 }
@@ -152,7 +170,7 @@ grid-template-columns: 1fr 3fr;
 }
 
 .a-center {
- align-items: center;
+  align-items: center;
 }
 
 .p-1 {
@@ -164,11 +182,11 @@ grid-template-columns: 1fr 3fr;
 }
 
 .fa {
- transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .fa-plus {
- margin-right: 1rem;
+  margin-right: 1rem;
 }
 
 .mt-1 {
@@ -210,13 +228,13 @@ grid-template-columns: 1fr 3fr;
 }
 
 .list li.plus {
-  border-right: 8px solid rgb(125,225,125);
-  border-left: 8px solid rgb(125,225,125);
+  border-right: 8px solid rgb(125, 225, 125);
+  border-left: 8px solid rgb(125, 225, 125);
 }
 
 .list li.minus {
-  border-right: 8px solid rgb(225,125,125);
-  border-left: 8px solid rgb(225,125,125);
+  border-right: 8px solid rgb(225, 125, 125);
+  border-left: 8px solid rgb(225, 125, 125);
 }
 
 .list li:hover .delete-btn {
@@ -224,15 +242,15 @@ grid-template-columns: 1fr 3fr;
 }
 
 #my-expense {
-  color: rgb(225,125,125);
+  color: rgb(225, 125, 125);
 }
 
 #my-income {
-  color: rgb(125,225,125);
+  color: rgb(125, 225, 125);
 }
 
 #addNewForm {
- background-color: var(--primary);
+  background-color: var(--primary);
   padding: 1rem;
   margin-bottom: 2rem;
   width: 100%;
@@ -251,7 +269,7 @@ grid-template-columns: 1fr 3fr;
 }
 
 #addNewForm form {
- background-color: var(--secondary);
+  background-color: var(--secondary);
   color: var(--primary);
   display: flex;
   flex-direction: column;
@@ -272,7 +290,6 @@ grid-template-columns: 1fr 3fr;
   display: grid;
   grid-template-columns: 1fr 3fr;
   vertical-align: center;
- 
 }
 
 #addNewForm label {
@@ -281,8 +298,8 @@ grid-template-columns: 1fr 3fr;
   padding: 0.5rem;
 }
 
-#addNewForm input[type='text'],
-#addNewForm input[type='number'] {
+#addNewForm input[type="text"],
+#addNewForm input[type="number"] {
   background-color: var(--primary);
   color: var(--secondary);
   width: 100%;
@@ -290,4 +307,16 @@ grid-template-columns: 1fr 3fr;
 
 .hide {
   display: none !important;
+}
+
+@media screen and (max-width: 792px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  html {
+    font-size: 69.2%;
+  }
 }
