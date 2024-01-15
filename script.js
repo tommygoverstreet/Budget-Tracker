@@ -9,6 +9,12 @@ const amount = document.getElementById('amount');
 const addNew = document.getElementById('addNew');
 const addNewForm = document.getElementById('addNewForm');
 const close = document.getElementById('close');
+const d = new Date();
+const day = d.getDate();
+const month = d.getMonth() + 1;
+const year = d.getFullYear();
+
+const currentDate = `${month}/${day}/${year}`;
 
 addNew.addEventListener('click', () => {
  if (addNewForm.classList.contains('hide')) {
@@ -50,13 +56,9 @@ function addTransaction(e) {
   };
 
   transactions.push(transaction);
-
   addTransactionDOM(transaction);
-
   updateValues();
-
   updateLocalStorage();
-
   text.value = '';
   amount.value = '';
  }
@@ -72,17 +74,18 @@ function addTransactionDOM(transaction) {
  // Get sign
  const sign = transaction.amount < 0 ? '-' : '+';
 
- const item = document.createElement('li');
+ const item = document.createElement('tr');
 
  // Add class based on value
  item.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
 
  item.innerHTML = `
-    ${transaction.text} <span>${sign}${Math.abs(
+    <td>${currentDate}</td><td>${transaction.text}</td> <td>${sign}${Math.abs(
   transaction.amount
- )}</span> 
-  <button class="delete-btn" onclick="removeTransaction(${transaction.id
-  })">x</button>
+ )}</td> 
+  <td class="btn"><button class="delete-btn btn" onclick="removeTransaction(${transaction.id})">
+  <i class="fa fa-trash"></i>
+  </button></td>
 `;
 
  list.appendChild(item);
