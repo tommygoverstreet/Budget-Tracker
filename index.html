@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css" />
   <title>Expense Tracker</title>
  </head>
@@ -15,59 +17,65 @@
    <h1>Expense Tracker</h1>
   </header>
 
-   <div class="balance">
-    <h2>Your Balance</h2>
-    <p id="balance">$0.00</p>
+  <!-- Total Balance -->
+   <div class="balance row">
+    <h2 class="p-1">Your Balance</h2>
+    <p id="balance" class="h2 p-1">$0.00</p>
    </div>
 
-   <div class="inc-exp-container row">
-    <div class="col">
-    <div class="black-bg row mt-1">
-     <h4 class="green p-1">Income</h4>
-     <p id="my-income" class="money plus p-1">+$0.00</p>
+   <!-- Sidebar -->
+   <aside class="col">
+    <div class="money row">
+     <h4 class="p-1">Income</h4>
+     <p id="my-income" class="plus p-1 h4">+$0.00</p>
     </div>
-    <div class="black-bg red row mt-1">
+    <div class="money row">
      <h4 class="p-1">Expense</h4>
-     <p id="my-expense" class="money minus p-1">-$0.00</p>
+     <p id="my-expense" class="minus p-1 h4">-$0.00</p>
+    </div>
+  </aside>
+   
+<main class="transactions col p-2">
+   <h3 class="center">Transactions</h3>
+   <div class="row">
+    <div class="action-btn">
+     <button type="button" id="addNew" class="btn"><i class="fa fa-plus"></i>ADD</button>
     </div>
    </div>
- 
-   <div class="action-btn">
-    <button type="button" id="addNew" class="btn">Add new transaction</button>
-   </div>
-  </div>
-   <hr>
-   
-<div class="transactions">
-   <h3>Transactions</h3>
-   <ul id="list" class="list">
-    <!-- <li class="minus">
-          Cash <span>-$400</span><button class="delete-btn">x</button>
-        </li> -->
-   </ul>
- <p>On mobile screens, tap on the far left edge to delete a transaction</p>
-  </div>
-
+   <table>
+    <thead>
+      <th>Date</th>
+      <th>Transaction</th>
+      <th>Amount</th>
+      <th>Delete</th>
+    </thead>
+    <tbody id="list" class="list">
+     
+    </tbody>
+   </table>
+  </main>
+ </div>
   
     <div id="addNewForm" class="col hide">
-   <h3>Add new transaction</h3>
+   <h3>Add Transaction</h3>
    <form id="form">
     <div class="form-control">
-     <label for="text">Text</label>
+     <label for="text" class="lg">Item</label>
      <input type="text" id="text" placeholder="Enter text..." />
     </div>
     <div class="form-control">
-     <label for="amount">Amount
+     <label for="amount" class="lg">Amount
       </label>
      <input type="number" id="amount" placeholder="Enter amount..." />
-     <p>(negative - expense, positive - income)</p>
+    
     </div>
-    <button type="submit" class="btn">Add transaction</button>
-    <button type="button" id="close" class="btn">Close</button>
+    <p>(negative - expense, positive - income)</p>
+    <button type="submit" class="btn mt-1 lg">Add transaction</button>
+    <button type="button" id="close" class="btn mt-1 lg">Close</button>
    </form>
   </div>
 
- </div>
+ 
 
   <script src="script.js"></script>
  </body>
